@@ -1,0 +1,10 @@
+{
+  "name": "vision-api-macos",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "swift build -c release",
+    "dev": "swift run App",
+    "start": "swift run App"
+  }
+}

@@ -1,12 +1,8 @@
 <div align="center">
 
-[中文](README_CN.md) | English
-
 # 🔍 Vision API
 
 **Apple's on-device ML power, exposed as a clean REST API — self-hosted, zero cloud, zero cost.**
-
-**Apple 设备端 ML 能力，封装为简洁的 REST API —— 本地自托管，零云服务，零成本。**
 
 [![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org)
 [![Vapor](https://img.shields.io/badge/Vapor-4-blue.svg)](https://vapor.codes)
@@ -26,11 +22,27 @@ The intended use case is **local or intranet self-hosting**: run it on a Mac you
 Built for indie developers and small teams who want production-quality image analysis without the cloud bill or the privacy trade-off.
 
 ```bash
-# Three commands from zero to running:
-git clone https://github.com/tdawn0-0/vision-api && cd vision-api
-swift package resolve
-swift run App
+git clone https://github.com/tdawn0-0/vision-api && cd vision-api/vision-api-macos
+swift package resolve && swift run App
 # → Server live at http://localhost:9493
+```
+
+| Folder | Platform | Stack |
+|--------|----------|--------|
+| [`vision-api-macos/`](vision-api-macos/README.md) | macOS 15+ | Swift, Vapor, Apple Vision (full API) |
+| [`vision-api-linux/`](vision-api-linux/README.md) | Linux | Rust, Tesseract, rxing (OCR + barcodes) |
+
+### Monorepo scripts (Turbo)
+
+From the repo root (Node.js 18+):
+
+```bash
+npm install
+npm run build          # macOS → Swift; Linux → Rust (current platform only)
+npm run dev
+npm run build:macos    # explicit filter
+npm run build:linux    # explicit filter (on Mac: brew install tesseract tesseract-lang)
+npm run build:all      # both packages (CI / when both toolchains are installed)
 ```
 
 ---
@@ -55,7 +67,7 @@ swift run App
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started (macOS)
 
 ### Prerequisites
 
@@ -68,7 +80,7 @@ swift run App
 
 ```bash
 git clone https://github.com/tdawn0-0/vision-api
-cd vision-api
+cd vision-api/vision-api-macos
 swift package resolve
 ```
 

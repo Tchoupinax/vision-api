@@ -1,0 +1,18 @@
+[package]
+name = "vision-api-linux"
+version = "0.1.0"
+edition = "2021"
+description = "Linux-compatible Vision API (OCR + barcodes) — Rust port"
+license = "MIT"
+
+[dependencies]
+axum = { version = "0.8", features = ["multipart"] }
+image = "0.25"
+rxing = "0.7"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net"] }
+tower-http = { version = "0.6", features = ["limit", "trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

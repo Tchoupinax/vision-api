@@ -1,0 +1,26 @@
+{
+  "name": "vision-api",
+  "private": true,
+  "workspaces": [
+    "vision-api-macos",
+    "vision-api-linux"
+  ],
+  "scripts": {
+    "build": "node scripts/turbo-platform.mjs build",
+    "dev": "node scripts/turbo-platform.mjs dev",
+    "start": "node scripts/turbo-platform.mjs start",
+    "build:all": "turbo run build",
+    "dev:all": "turbo run dev",
+    "start:all": "turbo run start",
+    "build:macos": "turbo run build --filter=vision-api-macos",
+    "build:linux": "turbo run build --filter=vision-api-linux",
+    "dev:macos": "turbo run dev --filter=vision-api-macos",
+    "dev:linux": "turbo run dev --filter=vision-api-linux",
+    "start:macos": "turbo run start --filter=vision-api-macos",
+    "start:linux": "turbo run start --filter=vision-api-linux"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0"
+  },
+  "packageManager": "npm@10.9.0"
+}

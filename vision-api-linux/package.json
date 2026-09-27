@@ -1,0 +1,10 @@
+{
+  "name": "vision-api-linux",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cargo build --release",
+    "dev": "cargo run",
+    "start": "cargo run --release"
+  }
+}

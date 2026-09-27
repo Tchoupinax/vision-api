@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "vision-api",
+    name: "vision-api-macos",
     platforms: [
         .macOS(.v15)
     ],

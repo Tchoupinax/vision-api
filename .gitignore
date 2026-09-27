@@ -1,5 +1,10 @@
 Packages
 .build
+vision-api-macos/.build
+vision-api-macos/.swiftpm
+vision-api-linux/target
+node_modules
+.turbo
 xcuserdata
 *.xcodeproj
 DerivedData/
