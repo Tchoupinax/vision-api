@@ -39,11 +39,11 @@ swift run App
 
 | Feature | Endpoint | macOS |
 |---|---|---|
-| 📄 **OCR / Text Recognition** | Extract printed & handwritten text from any image | 10.15+ |
-| ✂️ **Background Removal** | Remove backgrounds with pixel-perfect subject masking | 12+ |
-| 🎨 **Aesthetics Scoring** | Score photo quality (blur, exposure, composition) and detect utility images | 15+ |
-| 🏷️ **Auto Tagging / Classification** | Get 1000+ semantic labels (`dog`, `beach`, `food`) with confidence scores | 10.15+ |
-| 🔳 **Barcode / QR Detection** | Detect & decode QR codes, EAN-13, and 20+ other formats | 10.13+ |
+| 📄 **OCR / Text Recognition** | `POST /text-detection/recognize-text` | 10.15+ |
+| ✂️ **Background Removal** | `POST /image-feature/background-removal` | 12+ |
+| 🎨 **Aesthetics Scoring** | `POST /image-feature/aesthetics-scoring` | 15+ |
+| 🏷️ **Auto Tagging / Classification** | `POST /image-classification/classify` | 10.15+ |
+| 🔳 **Barcode / QR Detection** | `POST /barcode-detection/detect` | 10.13+ |
 
 > 📖 Interactive API docs available at `http://localhost:9493/Swagger/index.html` once running.
 
@@ -101,7 +101,7 @@ http://localhost:9493/Swagger/index.html
 Or send a quick request from the terminal:
 
 ```bash
-curl -X POST http://localhost:9493/ocr \
+curl -X POST http://localhost:9493/text-detection/recognize-text \
   -F "imageFile=@/path/to/image.png"
 ```
 

@@ -7,9 +7,9 @@ let package = Package(
         .macOS(.v15)
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.121.3"),
-        .package(url: "https://github.com/apple/swift-nio.git", from: "2.96.0"),
-        .package(url: "https://github.com/dankinsoid/VaporToOpenAPI.git", from: "4.9.1"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.122.2"),
+        .package(url: "https://github.com/apple/swift-nio.git", from: "2.103.0"),
+        .package(url: "https://github.com/dankinsoid/VaporToOpenAPI.git", from: "4.9.2"),
     ],
     targets: [
         .executableTarget(

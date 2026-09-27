@@ -35,13 +35,13 @@ swift run App
 
 ## ✨ 功能概览
 
-| 功能 | 端点说明 | macOS 要求 |
+| 功能 | 端点 | macOS 要求 |
 |---|---|---|
-| 📄 **OCR / 文字识别** | 从任意图像中提取印刷体与手写文字 | 10.15+ |
-| ✂️ **背景移除** | 像素级精准主体抠图，完美去除背景 | 12+ |
-| 🎨 **美学评分** | 评估照片质量（模糊、曝光、构图），并识别功能性图像 | 15+ |
-| 🏷️ **自动标签 / 分类** | 获取 1000+ 语义标签（`狗`、`海滩`、`食物`）及置信度分数 | 10.15+ |
-| 🔳 **条码 / 二维码识别** | 识别并解码二维码、EAN-13 等 20+ 种标准格式 | 10.13+ |
+| 📄 **OCR / 文字识别** | `POST /text-detection/recognize-text` | 10.15+ |
+| ✂️ **背景移除** | `POST /image-feature/background-removal` | 12+ |
+| 🎨 **美学评分** | `POST /image-feature/aesthetics-scoring` | 15+ |
+| 🏷️ **自动标签 / 分类** | `POST /image-classification/classify` | 10.15+ |
+| 🔳 **条码 / 二维码识别** | `POST /barcode-detection/detect` | 10.13+ |
 
 > 📖 服务启动后，可在 `http://localhost:9493/Swagger/index.html` 访问交互式 API 文档。
 
@@ -99,7 +99,7 @@ http://localhost:9493/Swagger/index.html
 或在终端发送一个快速请求：
 
 ```bash
-curl -X POST http://localhost:9493/ocr \
+curl -X POST http://localhost:9493/text-detection/recognize-text \
   -F "imageFile=@/path/to/image.png"
 ```
 
